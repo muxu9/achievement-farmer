@@ -1,0 +1,16 @@
+[project]
+name = "achievment-farmer"
+version = "0.1.0"
+description = "A configurable, resumable GitHub achievement CLI"
+requires-python = ">=3.11"
+dependencies = ["typer>=0.16,<1", "rich>=13,<15"]
+
+[project.scripts]
+farmer = "farmer:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+include = ["farmer.py"]
