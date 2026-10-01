@@ -115,7 +115,7 @@ def step(config, index, existing):
             api(f"repos/{repo}/git/refs", "POST", {"ref": f"refs/heads/{branch}", "sha": commit["sha"]})
         pr = api(f"repos/{repo}/pulls", "POST", {
             "title": f"{config['title']} {index:04d}", "head": branch, "base": base,
-            "body": f"Achievement practice: {config['campaign']}, step {index}.\n\nCoauthor: @{config['coauthor']}"})
+            "body": config.get("body", "Update generated record.")})
     identity(config)
     detail = api(f"repos/{repo}/pulls/{pr['number']}")
     merged = api(f"repos/{repo}/pulls/{pr['number']}/merge", "PUT", {
