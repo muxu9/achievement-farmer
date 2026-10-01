@@ -9,7 +9,7 @@ from typer.testing import CliRunner
 import farmer
 
 
-CONFIG = dict(account="muxu9", repo="muxu9/achievment-farmer", coauthor="torvalds",
+CONFIG = dict(account="muxu9", repo="muxu9/achievement-farmer", coauthor="torvalds",
               coauthor_name="Linus Torvalds", coauthor_email="1024025+torvalds@users.noreply.github.com",
               author_name="muxu9", author_email="243730108+muxu9@users.noreply.github.com",
               campaign="test", title="Pair practice")
@@ -54,7 +54,7 @@ class FarmerTests(unittest.TestCase):
             {"login": "muxu9"}, {"head": {"sha": "abc"}}, {"merged": True}
         ]) as api:
             self.assertEqual(farmer.step(CONFIG, 1, {"farmer/test/0001": pr}), (pr, True))
-            self.assertEqual(api.call_args.args, ("repos/muxu9/achievment-farmer/pulls/7/merge", "PUT",
+            self.assertEqual(api.call_args.args, ("repos/muxu9/achievement-farmer/pulls/7/merge", "PUT",
                                                  {"merge_method": "merge", "sha": "abc"}))
 
     def test_failed_merge_is_not_reported_as_success(self):

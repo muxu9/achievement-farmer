@@ -1,5 +1,5 @@
 [project]
-name = "achievment-farmer"
+name = "achievement-farmer"
 version = "0.1.0"
 description = "A configurable, resumable GitHub achievement CLI"
 requires-python = ">=3.11"

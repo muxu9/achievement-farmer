@@ -1,4 +1,4 @@
-# achievment-farmer
+# achievement-farmer
 
 A small CLI for practicing coauthored GitHub pull requests, with configurable project and coauthor credit, progress tables, offline previews, and resumable runs.
 
@@ -8,8 +8,8 @@ Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and [GitHu
 
 ```bash
 gh auth login
-git clone https://github.com/muxu9/achievment-farmer.git
-cd achievment-farmer
+git clone https://github.com/muxu9/achievement-farmer.git
+cd achievement-farmer
 uv sync --locked
 uv run farmer --help
 ```
